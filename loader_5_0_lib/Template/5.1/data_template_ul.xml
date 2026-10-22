@@ -1,0 +1,52 @@
+﻿<Data>
+	<Subject_UL>
+		<Title subjectID="32811155">
+			<UL_1_Name>
+				<fullName>ООО &quot;ХОРОШИЙ САМОЛЕТ&quot;</fullName>
+				<shortName>ООО &quot;ХОРОШИЙ САМОЛЕТ&quot;</shortName>
+				<change_0/>
+			</UL_1_Name>
+			<UL_2_Address>
+				<countryCode>643</countryCode>
+				<locationCode>10000010000</locationCode>
+				<Phone_group_UL_2_Address>
+					<phone>+7(916)10000</phone>
+				</Phone_group_UL_2_Address>
+				<Phone_group_UL_2_Address>
+					<phone>+8(495)99999</phone>
+				</Phone_group_UL_2_Address>
+				<email>mailtest123@mail.ru</email>
+				<foreignerFact_0/>
+			</UL_2_Address>
+			<UL_3_Reg>
+				<regNum>9564288077652</regNum>
+			</UL_3_Reg>
+			<UL_4_Tax>
+				<TaxNum_group_UL_4_Tax>
+					<taxCode>1</taxCode>
+					<taxNum>5719813597</taxNum>
+				</TaxNum_group_UL_4_Tax>
+			</UL_4_Tax>
+			<UL_5_Reorg>
+				<exist_0/>
+			</UL_5_Reorg>
+		</Title>
+		<Events>
+			<UL_Event_1_1 orderNum="5" eventDateTime="2024-02-01" operationCode="A">
+				<UL_45_Application>
+					<role>3</role>
+					<uid>e012cdf1-545f-11f3-9609-df3e9da73043-3</uid>
+					<applicationDate>2024-01-01</applicationDate>
+					<sourceCode>9</sourceCode>
+					<wayCode>7</wayCode>
+					<stageEndDate>2026-06-03</stageEndDate>
+					<stageCode>1</stageCode>
+					<stageDate>2024-01-01</stageDate>
+					<applicationCode>6</applicationCode>
+					<num>ZNUM_03032026075233A1S1-PN-1500</num>
+					<platformExist_1/>
+				</UL_45_Application>
+			</UL_Event_1_1>
+		</Events>
+	</Subject_UL>
+</Data>

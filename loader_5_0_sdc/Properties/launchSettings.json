@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "loader_5_0_sdc": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

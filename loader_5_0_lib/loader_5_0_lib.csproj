@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DataBase\Scripts\loader_GetPreviousPackages.sql" />
+    <None Remove="DataBase\Scripts\loader_getUploadResultXmlByKeyId.sql" />
+    <None Remove="DataBase\Scripts\loader_uf41_GetPreviousPackages.sql" />
+    <None Remove="DataBase\Scripts\loader_uf50_GetActiveUploadRequest.sql" />
+    <None Remove="DataBase\Scripts\loader_uni_GetFinishUploads.sql" />
+    <None Remove="DataBase\Scripts\loader_uni_GetSetUploadToProcess.sql" />
+    <None Remove="Template\4.1\data_template_fl.xml" />
+    <None Remove="Template\4.1\data_template_ul.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="DataBase\Scripts\loader_GetPreviousPackages.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataBase\Scripts\loader_getUploadResultXmlByKeyId.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataBase\Scripts\loader_uf50_GetActiveUploadRequest.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataBase\Scripts\loader_uni_GetFinishUploads.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataBase\Scripts\loader_uni_GetSetUploadToProcess.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Template\4.1\data_template_fl.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Template\4.1\data_template_ul.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Template\5.1\data_template_fl.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Template\5.1\data_template_ul.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Template\5.0\data_template_fl.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Template\5.0\data_template_ul.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Confluent.Kafka" Version="2.13.1" />
+    <PackageReference Include="Elastic.Apm.SerilogEnricher" Version="8.19.0" />
+    <PackageReference Include="Elastic.Extensions.Logging" Version="8.19.0" />
+    <PackageReference Include="Elastic.Serilog.Sinks" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="2.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.36" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.1" />
+    <PackageReference Include="Npgsql" Version="8.0.8" />
+    <PackageReference Include="Serilog" Version="4.3.1" />
+    <PackageReference Include="Serilog.Enrichers.Dynamic" Version="1.0.9" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="8.0.4" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="6.1.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\loader_utils\loader_utils.csproj" />
+    <ProjectReference Include="..\xsd_base\xsd_base.csproj" />
+    <ProjectReference Include="..\xsd_five_one\xsd_five_one.csproj" />
+    <ProjectReference Include="..\xsd_five_zero\xsd_five_zero.csproj" />
+  </ItemGroup>
+
+</Project>

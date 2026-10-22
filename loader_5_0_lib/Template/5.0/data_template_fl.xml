@@ -1,0 +1,48 @@
+﻿<Data>
+	<Subject_FL>
+		<Title subjectID="32811114">
+			<FL_1_4_Group>
+				<FL_1_Name>
+					<lastName>КУЗНЕЦОВ</lastName>
+					<firstName>МАРК</firstName>
+				</FL_1_Name>
+				<FL_4_Doc>
+					<countryCode>643</countryCode>
+					<docCode>21</docCode>
+					<docSeries>9524</docSeries>
+					<docNum>908243</docNum>
+					<issueDate>2024-10-05</issueDate>
+					<foreignerCode>3</foreignerCode>
+				</FL_4_Doc>
+			</FL_1_4_Group>
+			<FL_2_5_Group>
+				<FL_2_PrevName>
+					<prevNameFlag_0/>
+				</FL_2_PrevName>
+				<FL_5_PrevDoc>
+					<prevDocFact_0/>
+				</FL_5_PrevDoc>
+			</FL_2_5_Group>
+			<FL_3_Birth>
+				<birthDate>2003-10-05</birthDate>
+			</FL_3_Birth>
+		</Title>
+		<Events>
+			<FL_Event_1_1 orderNum="1" eventDateTime="2024-02-01" operationCode="A">
+				<FL_55_Application>
+					<role>3</role>
+					<uid>df73a416-545f-11f3-9d89-c8177bc7dc27-b</uid>
+					<applicationDate>2024-01-01</applicationDate>
+					<sourceCode>9</sourceCode>
+					<wayCode>7</wayCode>
+					<stageEndDate>2026-06-03</stageEndDate>
+					<stageCode>1</stageCode>
+					<stageDate>2024-01-01</stageDate>
+					<applicationCode>6</applicationCode>
+					<num>ZNUM_03032026075233A1S1-PN-1476</num>
+					<platformExist_1/>
+				</FL_55_Application>
+			</FL_Event_1_1>
+		</Events>
+	</Subject_FL>
+</Data>

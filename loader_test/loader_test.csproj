@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\loader_utils\loader_utils.csproj" />
+    <ProjectReference Include="..\xsd_five_one\xsd_five_one.csproj" />
+    <ProjectReference Include="..\xsd_five_zero\xsd_five_zero.csproj" />
+  </ItemGroup>
+
+</Project>

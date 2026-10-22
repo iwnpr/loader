@@ -1,0 +1,40 @@
+﻿using loader_utils;
+
+
+namespace Xsd.VersionFour.Main
+{
+    public partial class FL_Event_1_4_1_Type
+    {
+        public override List<INotificationOfAcceptanceError> Check(ISource source, SubjectTitleDataFL title)
+        {
+            var errorList = BaseCheck(source, title);
+            foreach (var addrReg in FL_8_AddrReg.OrEmptyIfNull())
+            {
+                errorList.AddRange(addrReg.Validate(this, source, title.FL_3_Birth));
+            }
+            errorList.AddRange(FL_9_AddrFact.Validate(this));
+            errorList.AddRange(FL_11_IndividualEntrepreneur.Validate(this, source, title.FL_6_Tax));
+            errorList.AddRange(FL_12_Capacity.Validate(this, title.FL_3_Birth));
+            errorList.AddRange(FL_17_DealUid.Validate(this, source));
+            errorList.AddRange(FL_18_Deal.Validate(this, source, title.FL_6_Tax, FL_17_DealUid));
+            errorList.AddRange(FL_19_Amount.Validate(this, FL_18_Deal));
+            foreach (var amountInfo in FL_19_1_AmountInfo.OrEmptyIfNull())
+            {
+                errorList.AddRange(amountInfo.Validate(this, FL_18_Deal));
+            }
+            errorList.AddRange(FL_20_JointDebtors.Validate(this));
+            errorList.AddRange(FL_21_PaymentTerms.Validate(this, FL_17_DealUid, FL_18_Deal));
+            foreach (var fund in FL_24_Fund.OrEmptyIfNull())
+            {
+                errorList.AddRange(fund.Validate(this, FL_17_DealUid));
+            }
+            errorList.AddRange(FL_25_26_27_28_Group.Validate(this, FL_18_Deal, null, FL_56_Participation));
+            errorList.AddRange(FL_31_NonMonetarySubject.Validate(this, FL_18_Deal));
+            errorList.AddRange(FL_30_NonMonetarySource.Validate(this, FL_17_DealUid, FL_18_Deal, FL_24_Fund));
+            errorList.AddRange(FL_54_Accounting.Validate(this, FL_18_Deal));
+            errorList.AddRange(FL_55_Application.Validate(this));
+            errorList.AddRange(FL_56_Participation.Validate(this, FL_17_DealUid, FL_18_Deal, FL_25_26_27_28_Group));
+            return errorList;
+        }
+    }
+}

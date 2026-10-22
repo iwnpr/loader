@@ -1,0 +1,47 @@
+﻿using loader_utils;
+
+namespace Xsd.VersionFiveZero.Main
+{
+    public interface I_FL_17_DealUid_Type : I_DealUid_Type, I_BlockType
+    {
+        public List<INotificationOfAcceptanceError> Check(IEventData eventData, object source)
+        {
+            ErrorData errorData = new(blockName, eventData);
+
+            if (!UidHelper.CheckUid(uid))
+            {
+                errorData.AddError("uid", uid, "Неверный контрольный символ УИда сделки ФЛ_17.1");
+            }
+            foreach (var refUidValue in refUid.OrEmptyIfNull())
+            {
+                if (!UidHelper.CheckUid(refUidValue))
+                {
+                    errorData.AddError("refUid", refUidValue, "Неверный контрольный символ УИда сделки, по которой задолженность была полностью или частично рефинансирована ФЛ_17.3");
+                }
+            }
+
+            if (openDate.DateGreater(eventData.eventDateTimeLocal))
+            {
+                errorData.AddError("openDate", openDate, "Дата совершения сделки ФЛ_17.4 позднее даты и времени наступления события eventDateTime");
+            }
+
+            if (source is FL_46_UL_36_OrgSource_Type orgSource)
+            {
+                if (orgSource.beginDateSourceLiquidation.DateLess(openDate))
+                {
+                    errorData.AddError("openDate", openDate, "Дата совершения сделки ФЛ_17.4 позднее даты начала ликвидации источника ФЛ_46.13 (ЮЛ_36.13)");
+                }
+            }
+
+            return errorData.ErrorList;
+        }
+    }
+
+    public static partial class Validate_Extensions
+    {
+        public static List<INotificationOfAcceptanceError> Validate(this I_FL_17_DealUid_Type block, IEventData eventData, object source)
+        {
+            return [.. (block?.Check(eventData, source)).OrEmptyIfNull()];
+        }
+    }
+}

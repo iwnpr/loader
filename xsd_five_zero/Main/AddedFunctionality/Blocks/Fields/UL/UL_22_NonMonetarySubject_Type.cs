@@ -1,0 +1,21 @@
+﻿using loader_utils;
+using System.Xml.Serialization;
+
+namespace Xsd.VersionFiveZero.Main
+{
+    public partial class UL_22_NonMonetarySubject_Type
+    {
+        ValueField<bool?> fulfillmentFailExistField;
+
+        [XmlIgnore]
+        public bool? fulfillmentFailExist
+        {
+            get
+            {
+                if (!fulfillmentFailExistField.IsInited)
+                    fulfillmentFailExistField.Value = Item.GetBool(ItemElementName, "fulfillmentFailExist");
+                return fulfillmentFailExistField.Value;
+            }
+        }
+    }
+}

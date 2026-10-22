@@ -1,0 +1,46 @@
+﻿<Data>
+	<Subject_FL>
+		<Title>
+			<FL_1_4_Group>
+				<FL_1_Name>
+					<lastName>ТЕСТ</lastName>
+					<firstName>ТЕСТ</firstName>
+				</FL_1_Name>
+				<FL_4_Doc>
+					<countryCode>000</countryCode>
+					<docCode>21</docCode>
+					<docNum>000000</docNum>
+					<issueDate>2000-01-01</issueDate>
+					<foreignerCode>1</foreignerCode>
+				</FL_4_Doc>
+			</FL_1_4_Group>
+			<FL_2_5_Group>
+				<FL_2_PrevName>
+					<prevNameFlag_0/>
+				</FL_2_PrevName>
+				<FL_5_PrevDoc>
+					<prevDocFact_0/>
+				</FL_5_PrevDoc>
+			</FL_2_5_Group>
+			<FL_3_Birth>
+				<birthDate>2000-01-01</birthDate>
+				<countryCode>000</countryCode>
+			</FL_3_Birth>
+		</Title>
+		<Events>
+			<FL_Event_1_1 orderNum="1" eventDate="2000-01-01" operationCode="A">
+				<FL_55_Application>
+					<role>1</role>
+					<uid>aaaaaaaa-aaaa-1aaa-aaaa-aaaaaaaaaaaa-a</uid>
+					<applicationDate>2000-01-01</applicationDate>
+					<sourceCode>1</sourceCode>
+					<wayCode>6</wayCode>
+					<stageCode>1</stageCode>
+					<stageDate>2000-01-01</stageDate>
+					<applicationCode>6</applicationCode>
+					<platformExist_0/>
+				</FL_55_Application>
+			</FL_Event_1_1>
+		</Events>
+	</Subject_FL>
+</Data>

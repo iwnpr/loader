@@ -1,0 +1,30 @@
+﻿<Data>
+	<Subject_UL>
+		<Title>
+			<UL_1_Name>
+				<fullName>ТЕСТ</fullName>
+				<shortName>ТЕСТ</shortName>
+				<change_0/>
+			</UL_1_Name>
+			<UL_2_Address>
+				<countryCode>643</countryCode>
+				<foreignerFact_0/>
+			</UL_2_Address>
+		</Title>
+		<Events>
+			<UL_Event_1_1 orderNum="1" eventDate="2000-01-01" operationCode="A">
+				<UL_45_Application>
+					<role>1</role>
+					<uid>aaaaaaaa-aaaa-1aaa-aaaa-aaaaaaaaaaaa-a</uid>
+					<applicationDate>2000-01-01</applicationDate>
+					<sourceCode>1</sourceCode>
+					<wayCode>7</wayCode>
+					<stageCode>1</stageCode>
+					<stageDate>2000-01-01</stageDate>
+					<applicationCode>6</applicationCode>
+					<platformExist_0/>
+				</UL_45_Application>
+			</UL_Event_1_1>
+		</Events>
+	</Subject_UL>
+</Data>
